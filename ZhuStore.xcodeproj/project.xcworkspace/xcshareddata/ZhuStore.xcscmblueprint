@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "034B5C442FCABEFB3823599C200A5A34E9C25E4D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "424A4DDC9C54D71D348BA861F6E01BD112935BD8" : 9223372036854775807,
+    "034B5C442FCABEFB3823599C200A5A34E9C25E4D" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "812AF393-B36C-42FA-B4FD-9B6300385EBE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "424A4DDC9C54D71D348BA861F6E01BD112935BD8" : "",
+    "034B5C442FCABEFB3823599C200A5A34E9C25E4D" : "Fake9Ji\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ZhuStore",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ZhuStore\/ZhuStore.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lushangshu\/Fake9Ji.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "034B5C442FCABEFB3823599C200A5A34E9C25E4D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lushangshu\/HomeServer.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "424A4DDC9C54D71D348BA861F6E01BD112935BD8"
+    }
+  ]
+}

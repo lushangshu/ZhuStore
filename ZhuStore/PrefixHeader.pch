@@ -1,0 +1,36 @@
+//
+//  PrefixHeader.pch
+//  ZhuStore
+//
+//  Created by zhuzai on 17/3/21.
+//  Copyright © 2017年 zhuzai. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+
+#import "SDAutoLayout.h"
+
+#endif
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#pragma mark - color define
+
+#define COrange [UIColor colorWithRed:255/255 green:70/255 blue:31/255 alpha:1.0]
+
+
+
+#pragma mark - layout define
+
+#define ScreenW [UIScreen mainScreen].bounds.size.width
+#define ScreenH [UIScreen mainScreen].bounds.size.height
+
+#pragma mark - version detect
+
+#define is_IOS_7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+
+
+#endif /* PrefixHeader_pch */
