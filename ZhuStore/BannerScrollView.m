@@ -20,7 +20,7 @@
 */
 
 -(void)setUpbannerView{
-    [self setFrame:CGRectMake(0, 0, ScreenW, 200)];
+    [self setFrame:CGRectMake(0, 0, ScreenW, 400)];
     
     NSArray *urls = @[
                       @"https://img2.ch999img.com//pic/edt/ad/20170315/20170315104904_9602.jpg",
@@ -45,6 +45,10 @@
     //cycleScrollView.titlesGroup = titles;
     
     [self addSubview:cycleScrollView];
+    
+    for (int i=0; i<8; i++) {
+        
+    }
     
 }
 
