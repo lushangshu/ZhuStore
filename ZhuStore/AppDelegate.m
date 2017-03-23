@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MainTabbarViewController.h"
 #import "HomePageVC.h"
+#import "StartUpAdsVC.h"
 
 @interface AppDelegate ()
 
@@ -26,6 +27,10 @@
     //self.window.rootViewController = tabBarController;
     //[self.window makeKeyAndVisible];
     
+    StartUpAdsVC *vc = [[StartUpAdsVC alloc]init];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = vc;
+    [self.window makeKeyAndVisible];
     return YES;
     
 }

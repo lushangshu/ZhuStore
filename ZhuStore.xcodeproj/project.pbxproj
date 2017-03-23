@@ -48,6 +48,7 @@
 		35EE6A411E822748005CEEEC /* FunctionBtnsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE6A401E822748005CEEEC /* FunctionBtnsView.m */; };
 		35EE6A441E82275A005CEEEC /* TopNewsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE6A431E82275A005CEEEC /* TopNewsView.m */; };
 		35EE6A471E825454005CEEEC /* SearchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE6A461E825454005CEEEC /* SearchBarView.m */; };
+		35EE6A4A1E837C68005CEEEC /* StartUpAdsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE6A491E837C68005CEEEC /* StartUpAdsVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +154,8 @@
 		35EE6A431E82275A005CEEEC /* TopNewsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopNewsView.m; sourceTree = "<group>"; };
 		35EE6A451E825454005CEEEC /* SearchBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchBarView.h; sourceTree = "<group>"; };
 		35EE6A461E825454005CEEEC /* SearchBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchBarView.m; sourceTree = "<group>"; };
+		35EE6A481E837C67005CEEEC /* StartUpAdsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartUpAdsVC.h; sourceTree = "<group>"; };
+		35EE6A491E837C68005CEEEC /* StartUpAdsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartUpAdsVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +209,7 @@
 				35EE69E01E81622F005CEEEC /* PublicClasses */,
 				35EE69A61E816073005CEEEC /* AppDelegate.h */,
 				35EE69A71E816073005CEEEC /* AppDelegate.m */,
+				35EE6A4B1E837C74005CEEEC /* startUpAds */,
 				35EE69EB1E8168DB005CEEEC /* AppFrame */,
 				35EE69EF1E816900005CEEEC /* Classify */,
 				35EE69E91E8168C4005CEEEC /* HomePage */,
@@ -391,6 +395,15 @@
 			name = view;
 			sourceTree = "<group>";
 		};
+		35EE6A4B1E837C74005CEEEC /* startUpAds */ = {
+			isa = PBXGroup;
+			children = (
+				35EE6A481E837C67005CEEEC /* StartUpAdsVC.h */,
+				35EE6A491E837C68005CEEEC /* StartUpAdsVC.m */,
+			);
+			name = startUpAds;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -563,6 +576,7 @@
 				35EE6A3D1E821B5C005CEEEC /* TADotView.m in Sources */,
 				35EE6A131E820B61005CEEEC /* NSData+ImageContentType.m in Sources */,
 				35EE6A1E1E820B61005CEEEC /* UIImage+WebP.m in Sources */,
+				35EE6A4A1E837C68005CEEEC /* StartUpAdsVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

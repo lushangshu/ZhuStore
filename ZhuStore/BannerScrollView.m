@@ -30,13 +30,13 @@
                       @"https://img2.ch999img.com//pic/edt/ad/20170318/20170318165645_2423.jpg",
                       @"https://img2.ch999img.com//pic/edt/ad/20170317/20170317165027_4831.jpg"
                       ];
-    NSArray *titles = @[@"",
-                        @"感",
-                        @"如",
-                        @"您",
-                        @"感",
-                        @"如",
-                        @"您"
+    NSArray *titles = @[@"1",
+                        @"2",
+                        @"3",
+                        @"4",
+                        @"5",
+                        @"6",
+                        @"7"
                         ];
     
     SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, ScreenW, 200) delegate:_delegateVc placeholderImage:nil];
