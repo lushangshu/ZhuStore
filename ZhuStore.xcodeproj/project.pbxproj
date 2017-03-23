@@ -47,6 +47,7 @@
 		35EE6A3E1E821B5C005CEEEC /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE6A3A1E821B5C005CEEEC /* TAPageControl.m */; };
 		35EE6A411E822748005CEEEC /* FunctionBtnsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE6A401E822748005CEEEC /* FunctionBtnsView.m */; };
 		35EE6A441E82275A005CEEEC /* TopNewsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE6A431E82275A005CEEEC /* TopNewsView.m */; };
+		35EE6A471E825454005CEEEC /* SearchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE6A461E825454005CEEEC /* SearchBarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +151,8 @@
 		35EE6A401E822748005CEEEC /* FunctionBtnsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionBtnsView.m; sourceTree = "<group>"; };
 		35EE6A421E82275A005CEEEC /* TopNewsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopNewsView.h; sourceTree = "<group>"; };
 		35EE6A431E82275A005CEEEC /* TopNewsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopNewsView.m; sourceTree = "<group>"; };
+		35EE6A451E825454005CEEEC /* SearchBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchBarView.h; sourceTree = "<group>"; };
+		35EE6A461E825454005CEEEC /* SearchBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchBarView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -382,6 +385,8 @@
 				35EE6A401E822748005CEEEC /* FunctionBtnsView.m */,
 				35EE6A421E82275A005CEEEC /* TopNewsView.h */,
 				35EE6A431E82275A005CEEEC /* TopNewsView.m */,
+				35EE6A451E825454005CEEEC /* SearchBarView.h */,
+				35EE6A461E825454005CEEEC /* SearchBarView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -554,6 +559,7 @@
 				35EE69A81E816073005CEEEC /* AppDelegate.m in Sources */,
 				35EE69A51E816073005CEEEC /* main.m in Sources */,
 				35EE6A1C1E820B61005CEEEC /* UIImage+GIF.m in Sources */,
+				35EE6A471E825454005CEEEC /* SearchBarView.m in Sources */,
 				35EE6A3D1E821B5C005CEEEC /* TADotView.m in Sources */,
 				35EE6A131E820B61005CEEEC /* NSData+ImageContentType.m in Sources */,
 				35EE6A1E1E820B61005CEEEC /* UIImage+WebP.m in Sources */,
@@ -798,6 +804,7 @@
 				35EE69CF1E816073005CEEEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35EE69D01E816073005CEEEC /* Build configuration list for PBXNativeTarget "ZhuStoreTests" */ = {
 			isa = XCConfigurationList;
@@ -806,6 +813,7 @@
 				35EE69D21E816073005CEEEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35EE69D31E816073005CEEEC /* Build configuration list for PBXNativeTarget "ZhuStoreUITests" */ = {
 			isa = XCConfigurationList;
@@ -814,6 +822,7 @@
 				35EE69D51E816073005CEEEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

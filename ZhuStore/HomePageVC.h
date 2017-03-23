@@ -9,11 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "BannerScrollView.h"
 
+#import "SearchBarView.h"
+
 @interface HomePageVC : UINavigationController
 
 {
     UIView *navBar;
     UITableView *mainTable;
+    
+    UIButton *locationSelect;
+    UIButton *scanBtn;
+    SearchBarView *searchBar;
     
 }
 

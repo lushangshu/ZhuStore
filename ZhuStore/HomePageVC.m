@@ -41,6 +41,28 @@
     navBar.sd_layout.leftSpaceToView(self.view,0).rightSpaceToView(self.view,0).topSpaceToView(self.view,0).heightIs(64);
     navBar.alpha = 0;
     
+    locationSelect = [UIButton new];
+    [self.view addSubview:locationSelect];
+    locationSelect.sd_layout.topSpaceToView(self.view,20).leftSpaceToView(self.view,5).widthIs(40).heightIs(40);
+    [locationSelect setBackgroundColor:[UIColor blueColor]];
+    //[locationSelect setBackgroundImage:[UIImage imageNamed:@"second"] forState:UIControlStateNormal];
+    
+    scanBtn = [UIButton new];
+    [self.view addSubview:scanBtn];
+    scanBtn.sd_layout.rightSpaceToView(self.view,5).topSpaceToView(self.view,20).heightIs(40).widthIs(40);
+    [scanBtn setBackgroundColor:[UIColor yellowColor]];
+    
+    searchBar = [[SearchBarView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+   
+    [self.view addSubview:searchBar];
+    searchBar.sd_layout.leftSpaceToView(locationSelect,10).topSpaceToView(self.view,20).rightSpaceToView(scanBtn,5).heightIs(40);
+
+    //[searchBar setUpSearchBarView];
+    
+    
+    
+    
+    
 }
 -(void)setUpUI{
     mainTable = [UITableView new];
@@ -65,7 +87,7 @@
 #pragma mark - contentOffset Calculation
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    NSLog(@"tableview is scrolling %f",scrollView.contentOffset.y/100);
+    //NSLog(@"tableview is scrolling %f",scrollView.contentOffset.y/100);
     
     navBar.alpha = scrollView.contentOffset.y/150;
 }
