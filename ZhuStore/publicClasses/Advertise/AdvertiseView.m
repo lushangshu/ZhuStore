@@ -150,8 +150,8 @@ static int const showtime = 3;
     }];
     NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
     [defaults setObject:@"no" forKey:@"advIsCheck"];
-    MainTabbarViewController *vc = [[MainTabbarViewController alloc]init];
-    self.window.rootViewController = vc;
+    //MainTabbarViewController *vc = [[MainTabbarViewController alloc]init];
+    //self.window.rootViewController = vc;
     
     
     

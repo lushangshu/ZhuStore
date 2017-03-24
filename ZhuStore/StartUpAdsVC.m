@@ -9,7 +9,7 @@
 #import "StartUpAdsVC.h"
 #import "MainTabbarViewController.h"
 
-@interface StartUpAdsVC () <UIScrollViewDelegate  >
+@interface StartUpAdsVC () <UIScrollViewDelegate >
 
 @property(nonatomic,strong) UIScrollView *scroll;
 @property(nonatomic,strong) UIPageControl *pageControl;
@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor redColor]];
-    
+    [self.navigationBar setHidden:YES];
     [self setUpUI];
     
     // Do any additional setup after loading the view.
@@ -69,7 +69,8 @@
 #pragma mark - swipe
 -(void)swipeGestureAction:(UITapGestureRecognizer *)swipe{
     MainTabbarViewController *tab = [[MainTabbarViewController alloc]init];
-    [self presentViewController:tab animated:YES completion:nil];
+    [self.navigationController pushViewController:tab animated:YES];
+    //[self presentViewController:tab animated:YES completion:nil];
     
 }
 

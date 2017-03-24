@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface BannerScrollView : UIView
+{
+    UIButton *btn;
+}
 
 @property (nonatomic,strong) id delegateVc;
 -(void)setUpbannerView;

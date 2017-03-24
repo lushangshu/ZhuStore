@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StartUpAdsVC : UIViewController
+@interface StartUpAdsVC : UINavigationController
 
 @end

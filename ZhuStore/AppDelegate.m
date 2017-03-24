@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BaseNaviViewController.h"
 #import "MainTabbarViewController.h"
 #import "HomePageVC.h"
 #import "StartUpAdsVC.h"
@@ -27,25 +28,30 @@
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if (![[defaults objectForKey:@"isFirstLogin"] isEqualToString:@"NO" ]) {
-        StartUpAdsVC *vc = [[StartUpAdsVC alloc]init];
-        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-        self.window.rootViewController = vc;
+//        StartUpAdsVC *vc = [[StartUpAdsVC alloc]init];
+//        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//        [vc setNavigationBarHidden:YES];
+//        self.window.rootViewController = vc;
+//        [self.window makeKeyAndVisible];
+        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"StartUpStoryBoard" bundle:nil];
+        self.window.rootViewController = [storyboard instantiateInitialViewController];
         [self.window makeKeyAndVisible];
+
     }
     
     NSString *filePath = [AdImageTool getFilePathWithImageName:[defaults valueForKey:@"adImageName"]];
     BOOL isExist = [AdImageTool isFileExistWithFilePath:filePath];
     if (isExist) {
-        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
-        MainTabbarViewController *tabBarController = [[MainTabbarViewController alloc] init];
-        self.window.rootViewController = tabBarController;
+        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"StartUpWithAds" bundle:nil];
+        self.window.rootViewController = [storyboard instantiateInitialViewController];
         [self.window makeKeyAndVisible];
         
         AdvertiseView *adView = [[AdvertiseView alloc]initWithFrame:self.window.bounds];
         adView.filePath = filePath;
         [adView show];
-        
+
     }
     return YES;
     

@@ -10,6 +10,10 @@
 		350DA6031E83BE9400398DB5 /* AdvertiseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DA5FD1E83BE9400398DB5 /* AdvertiseView.m */; };
 		350DA6041E83BE9400398DB5 /* AdImageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DA5FF1E83BE9400398DB5 /* AdImageTool.m */; };
 		350DA6051E83BE9400398DB5 /* AdvertiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DA6021E83BE9400398DB5 /* AdvertiseViewController.m */; };
+		350DA6081E84F8D800398DB5 /* BannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DA6071E84F8D800398DB5 /* BannerCell.m */; };
+		350DA60B1E851E4400398DB5 /* BaseNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DA60A1E851E4400398DB5 /* BaseNaviViewController.m */; };
+		350DA60D1E8521C200398DB5 /* StartUpStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350DA60C1E8521C200398DB5 /* StartUpStoryBoard.storyboard */; };
+		350DA60F1E8521E000398DB5 /* StartUpWithAds.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350DA60E1E8521E000398DB5 /* StartUpWithAds.storyboard */; };
 		35EE69A51E816073005CEEEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE69A41E816073005CEEEC /* main.m */; };
 		35EE69A81E816073005CEEEC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE69A71E816073005CEEEC /* AppDelegate.m */; };
 		35EE69AB1E816073005CEEEC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE69AA1E816073005CEEEC /* ViewController.m */; };
@@ -78,6 +82,12 @@
 		350DA6001E83BE9400398DB5 /* AdvertiseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdvertiseView.h; path = publicClasses/Advertise/AdvertiseView.h; sourceTree = "<group>"; };
 		350DA6011E83BE9400398DB5 /* AdvertiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdvertiseViewController.h; path = publicClasses/Advertise/AdvertiseViewController.h; sourceTree = "<group>"; };
 		350DA6021E83BE9400398DB5 /* AdvertiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdvertiseViewController.m; path = publicClasses/Advertise/AdvertiseViewController.m; sourceTree = "<group>"; };
+		350DA6061E84F8D800398DB5 /* BannerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerCell.h; sourceTree = "<group>"; };
+		350DA6071E84F8D800398DB5 /* BannerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerCell.m; sourceTree = "<group>"; };
+		350DA6091E851E4400398DB5 /* BaseNaviViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNaviViewController.h; sourceTree = "<group>"; };
+		350DA60A1E851E4400398DB5 /* BaseNaviViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNaviViewController.m; sourceTree = "<group>"; };
+		350DA60C1E8521C200398DB5 /* StartUpStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StartUpStoryBoard.storyboard; sourceTree = "<group>"; };
+		350DA60E1E8521E000398DB5 /* StartUpWithAds.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StartUpWithAds.storyboard; sourceTree = "<group>"; };
 		35EE69A01E816073005CEEEC /* ZhuStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhuStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35EE69A41E816073005CEEEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35EE69A61E816073005CEEEC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -237,6 +247,8 @@
 				35EE69E91E8168C4005CEEEC /* HomePage */,
 				35EE69EA1E8168CF005CEEEC /* GoodDetail */,
 				35EE69AC1E816073005CEEEC /* Main.storyboard */,
+				350DA60C1E8521C200398DB5 /* StartUpStoryBoard.storyboard */,
+				350DA60E1E8521E000398DB5 /* StartUpWithAds.storyboard */,
 				35EE69AF1E816073005CEEEC /* Assets.xcassets */,
 				35EE69B11E816073005CEEEC /* LaunchScreen.storyboard */,
 				35EE69B41E816073005CEEEC /* Info.plist */,
@@ -318,6 +330,8 @@
 			children = (
 				35EE69A91E816073005CEEEC /* ViewController.h */,
 				35EE69AA1E816073005CEEEC /* ViewController.m */,
+				350DA6091E851E4400398DB5 /* BaseNaviViewController.h */,
+				350DA60A1E851E4400398DB5 /* BaseNaviViewController.m */,
 				35EE69D61E8160B3005CEEEC /* MainTabbarViewController.h */,
 				35EE69D71E8160B3005CEEEC /* MainTabbarViewController.m */,
 			);
@@ -408,6 +422,8 @@
 			children = (
 				35EE6A2F1E820BCD005CEEEC /* BannerScrollView.h */,
 				35EE6A301E820BCD005CEEEC /* BannerScrollView.m */,
+				350DA6061E84F8D800398DB5 /* BannerCell.h */,
+				350DA6071E84F8D800398DB5 /* BannerCell.m */,
 				35EE6A3F1E822748005CEEEC /* FunctionBtnsView.h */,
 				35EE6A401E822748005CEEEC /* FunctionBtnsView.m */,
 				35EE6A421E82275A005CEEEC /* TopNewsView.h */,
@@ -539,6 +555,8 @@
 				35EE69B31E816073005CEEEC /* LaunchScreen.storyboard in Resources */,
 				35EE69B01E816073005CEEEC /* Assets.xcassets in Resources */,
 				35EE69AE1E816073005CEEEC /* Main.storyboard in Resources */,
+				350DA60D1E8521C200398DB5 /* StartUpStoryBoard.storyboard in Resources */,
+				350DA60F1E8521E000398DB5 /* StartUpWithAds.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,8 +588,10 @@
 				35EE6A201E820B61005CEEEC /* UIImageView+WebCache.m in Sources */,
 				35EE69E71E816260005CEEEC /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				35EE6A181E820B61005CEEEC /* SDWebImageDownloaderOperation.m in Sources */,
+				350DA60B1E851E4400398DB5 /* BaseNaviViewController.m in Sources */,
 				35EE6A191E820B61005CEEEC /* SDWebImageManager.m in Sources */,
 				35EE69AB1E816073005CEEEC /* ViewController.m in Sources */,
+				350DA6081E84F8D800398DB5 /* BannerCell.m in Sources */,
 				35EE6A2D1E820B84005CEEEC /* UIView+SDExtension.m in Sources */,
 				35EE69E81E816260005CEEEC /* UIView+SDAutoLayout.m in Sources */,
 				35EE6A171E820B61005CEEEC /* SDWebImageDownloader.m in Sources */,

@@ -9,6 +9,8 @@
 #import "HomePageVC.h"
 #import "GoodViewController.h"
 
+#import "BannerCell.h"
+
 @interface HomePageVC ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 
 
@@ -51,9 +53,9 @@
     [self.view addSubview:scanBtn];
     scanBtn.sd_layout.rightSpaceToView(self.view,5).topSpaceToView(self.view,20).heightIs(40).widthIs(40);
     [scanBtn setBackgroundColor:[UIColor yellowColor]];
+    [scanBtn addTarget:self action:@selector(jumpGoods) forControlEvents:UIControlEventTouchUpInside];
     
     searchBar = [[SearchBarView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
-   
     [self.view addSubview:searchBar];
     searchBar.sd_layout.leftSpaceToView(locationSelect,10).topSpaceToView(self.view,20).rightSpaceToView(scanBtn,5).heightIs(40);
 
@@ -101,13 +103,14 @@
     return 1;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    //UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    
+    BannerCell *cell = [[BannerCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     if (indexPath.section == 0) {
-        _scroll = [BannerScrollView new];
-        [cell addSubview:_scroll];
-        _scroll.sd_layout.leftSpaceToView(cell,0).topSpaceToView(cell,0).heightIs(200).widthIs(ScreenW);
+        [cell setUpUI];
+        cell.delegateVc = self;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
-        [_scroll setUpbannerView];
     }
     return cell;
 }
