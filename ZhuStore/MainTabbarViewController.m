@@ -10,6 +10,8 @@
 #import "HomePageVC.h"
 #import "GoodViewController.h"
 #import "ClassifyVC.h"
+#import "AdImageTool.h"
+#import "AdvertiseViewController.h"
 
 @interface MainTabbarViewController ()
 {
@@ -42,7 +44,7 @@
 -(void)createTabBar{
     iconArray_normal = @[@"first",@"first",@"first",@"first",@"first"];
     iconArray_selected = @[@"second",@"second",@"second",@"second",@"second"];
-    controllers =  @[@"HomePageVC",@"ClassifyVC",@"HomePageVC",@"HomePageVC",@"HomePageVC"];
+    controllers =  @[@"HomePageVC",@"ClassifyVC",@"GoodViewController",@"ClassifyVC",@"ClassifyVC"];
     nameArray =  @[@"首页",@"分类",@"九机集市",@"购物车",@"我的"];
     
     for (int i= 0; i<nameArray.count; i++) {
@@ -59,6 +61,7 @@
         
         
     }
+    [self downloadAdImages];
     
 }
 
@@ -74,6 +77,12 @@
     self.tabBar.tintColor = [UIColor blackColor];
     
     [self addChildViewController:childVc];
+}
+
+-(void)downloadAdImages{
+    
+    NSString *url = @"http://img2.ch999img.com//pic/edt/ad/20170310/20170310183831_0362.jpg";
+    [AdImageTool getAdvertisingImage: url];
 }
 
 /*

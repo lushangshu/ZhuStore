@@ -10,6 +10,8 @@
 #import "MainTabbarViewController.h"
 #import "HomePageVC.h"
 #import "StartUpAdsVC.h"
+#import "AdImageTool.h"
+#import "AdvertiseView.h"
 
 @interface AppDelegate ()
 
@@ -21,16 +23,30 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    //MainTabbarViewController *tabBarController = [[MainTabbarViewController alloc] init];
-    //self.window.rootViewController = tabBarController;
-    //[self.window makeKeyAndVisible];
     
-    StartUpAdsVC *vc = [[StartUpAdsVC alloc]init];
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = vc;
-    [self.window makeKeyAndVisible];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (![[defaults objectForKey:@"isFirstLogin"] isEqualToString:@"NO" ]) {
+        StartUpAdsVC *vc = [[StartUpAdsVC alloc]init];
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        self.window.rootViewController = vc;
+        [self.window makeKeyAndVisible];
+    }
+    
+    NSString *filePath = [AdImageTool getFilePathWithImageName:[defaults valueForKey:@"adImageName"]];
+    BOOL isExist = [AdImageTool isFileExistWithFilePath:filePath];
+    if (isExist) {
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+        MainTabbarViewController *tabBarController = [[MainTabbarViewController alloc] init];
+        self.window.rootViewController = tabBarController;
+        [self.window makeKeyAndVisible];
+        
+        AdvertiseView *adView = [[AdvertiseView alloc]initWithFrame:self.window.bounds];
+        adView.filePath = filePath;
+        [adView show];
+        
+    }
     return YES;
     
 }

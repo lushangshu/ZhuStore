@@ -29,6 +29,10 @@
 }
 
 -(void)setUpUI{
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@"NO" forKey:@"isFirstLogin"];
+    [defaults synchronize];
     self.scroll = [[UIScrollView alloc]initWithFrame:[UIScreen mainScreen].bounds];
     _scroll.backgroundColor = [UIColor lightGrayColor];
     _scroll.showsHorizontalScrollIndicator = NO;

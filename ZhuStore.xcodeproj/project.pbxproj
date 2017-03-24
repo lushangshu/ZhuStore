@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		350DA6031E83BE9400398DB5 /* AdvertiseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DA5FD1E83BE9400398DB5 /* AdvertiseView.m */; };
+		350DA6041E83BE9400398DB5 /* AdImageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DA5FF1E83BE9400398DB5 /* AdImageTool.m */; };
+		350DA6051E83BE9400398DB5 /* AdvertiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DA6021E83BE9400398DB5 /* AdvertiseViewController.m */; };
 		35EE69A51E816073005CEEEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE69A41E816073005CEEEC /* main.m */; };
 		35EE69A81E816073005CEEEC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE69A71E816073005CEEEC /* AppDelegate.m */; };
 		35EE69AB1E816073005CEEEC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE69AA1E816073005CEEEC /* ViewController.m */; };
@@ -69,6 +72,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		350DA5FD1E83BE9400398DB5 /* AdvertiseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdvertiseView.m; path = publicClasses/Advertise/AdvertiseView.m; sourceTree = "<group>"; };
+		350DA5FE1E83BE9400398DB5 /* AdImageTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdImageTool.h; path = publicClasses/Advertise/AdImageTool.h; sourceTree = "<group>"; };
+		350DA5FF1E83BE9400398DB5 /* AdImageTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdImageTool.m; path = publicClasses/Advertise/AdImageTool.m; sourceTree = "<group>"; };
+		350DA6001E83BE9400398DB5 /* AdvertiseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdvertiseView.h; path = publicClasses/Advertise/AdvertiseView.h; sourceTree = "<group>"; };
+		350DA6011E83BE9400398DB5 /* AdvertiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdvertiseViewController.h; path = publicClasses/Advertise/AdvertiseViewController.h; sourceTree = "<group>"; };
+		350DA6021E83BE9400398DB5 /* AdvertiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdvertiseViewController.m; path = publicClasses/Advertise/AdvertiseViewController.m; sourceTree = "<group>"; };
 		35EE69A01E816073005CEEEC /* ZhuStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhuStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35EE69A41E816073005CEEEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35EE69A61E816073005CEEEC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -183,6 +192,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		350DA5FC1E83BE8600398DB5 /* Advertise */ = {
+			isa = PBXGroup;
+			children = (
+				350DA5FD1E83BE9400398DB5 /* AdvertiseView.m */,
+				350DA5FE1E83BE9400398DB5 /* AdImageTool.h */,
+				350DA5FF1E83BE9400398DB5 /* AdImageTool.m */,
+				350DA6001E83BE9400398DB5 /* AdvertiseView.h */,
+				350DA6011E83BE9400398DB5 /* AdvertiseViewController.h */,
+				350DA6021E83BE9400398DB5 /* AdvertiseViewController.m */,
+			);
+			name = Advertise;
+			sourceTree = "<group>";
+		};
 		35EE69971E816073005CEEEC = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +275,7 @@
 		35EE69E01E81622F005CEEEC /* PublicClasses */ = {
 			isa = PBXGroup;
 			children = (
+				350DA5FC1E83BE8600398DB5 /* Advertise */,
 				35EE6A221E820B6B005CEEEC /* SDCycleScrollVIew */,
 				35EE69F01E820B52005CEEEC /* SDWebImage */,
 				35EE69E11E816238005CEEEC /* SDLayout */,
@@ -542,6 +565,7 @@
 			files = (
 				35EE6A1F1E820B61005CEEEC /* UIImageView+HighlightedWebCache.m in Sources */,
 				35EE6A3B1E821B5C005CEEEC /* TAAbstractDotView.m in Sources */,
+				350DA6051E83BE9400398DB5 /* AdvertiseViewController.m in Sources */,
 				35EE6A161E820B61005CEEEC /* SDWebImageDecoder.m in Sources */,
 				35EE6A201E820B61005CEEEC /* UIImageView+WebCache.m in Sources */,
 				35EE69E71E816260005CEEEC /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
@@ -560,8 +584,10 @@
 				35EE6A3E1E821B5C005CEEEC /* TAPageControl.m in Sources */,
 				35EE69DF1E8161A9005CEEEC /* GoodViewController.m in Sources */,
 				35EE6A411E822748005CEEEC /* FunctionBtnsView.m in Sources */,
+				350DA6031E83BE9400398DB5 /* AdvertiseView.m in Sources */,
 				35EE6A441E82275A005CEEEC /* TopNewsView.m in Sources */,
 				35EE6A3C1E821B5C005CEEEC /* TAAnimatedDotView.m in Sources */,
+				350DA6041E83BE9400398DB5 /* AdImageTool.m in Sources */,
 				35EE69EE1E8168FC005CEEEC /* ClassifyVC.m in Sources */,
 				35EE6A1B1E820B61005CEEEC /* UIButton+WebCache.m in Sources */,
 				35EE69D81E8160B3005CEEEC /* MainTabbarViewController.m in Sources */,
