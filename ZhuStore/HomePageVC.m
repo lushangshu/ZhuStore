@@ -111,6 +111,8 @@
         cell.delegateVc = self;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
+    }else if(indexPath.section == 1){
+        
     }
     return cell;
 }
