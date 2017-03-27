@@ -30,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
-    
+    self.title = @"首页";
     [self setUpUI];
 }
 
@@ -109,13 +109,14 @@
     if (indexPath.section == 0) {
         [cell setUpUI];
         cell.delegateVc = self;
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         
     }else if(indexPath.section == 1){
         //
     }else if(indexPath.section == 2){
         //
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 

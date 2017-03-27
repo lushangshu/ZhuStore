@@ -11,6 +11,7 @@
 @interface BannerCell : UITableViewCell
 {
     UIButton *btn;
+    UILabel *nameLabel;
     
 }
 -(void)setUpUI;

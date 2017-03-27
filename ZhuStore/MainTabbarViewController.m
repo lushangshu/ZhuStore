@@ -12,6 +12,7 @@
 #import "ClassifyVC.h"
 #import "AdImageTool.h"
 #import "AdvertiseViewController.h"
+#import "UserInfoVC.h"
 
 @interface MainTabbarViewController ()
 {
@@ -23,6 +24,10 @@
 @end
 
 @implementation MainTabbarViewController
+
+-(void)viewWillAppear:(BOOL)animated{
+    [self.navigationController.navigationBar setHidden:YES];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,7 +49,7 @@
 -(void)createTabBar{
     iconArray_normal = @[@"first",@"first",@"first",@"first",@"first"];
     iconArray_selected = @[@"second",@"second",@"second",@"second",@"second"];
-    controllers =  @[@"HomePageVC",@"ClassifyVC",@"GoodViewController",@"ClassifyVC",@"ClassifyVC"];
+    controllers =  @[@"HomePageVC",@"ClassifyVC",@"GoodViewController",@"ClassifyVC",@"UserInfoVC"];
     nameArray =  @[@"首页",@"分类",@"九机集市",@"购物车",@"我的"];
     
     for (int i= 0; i<nameArray.count; i++) {

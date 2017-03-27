@@ -9,6 +9,7 @@
 #import "BannerCell.h"
 #import "SDCycleScrollView.h"
 #import "GoodViewController.h"
+#import "WebViewController.h"
 
 @implementation BannerCell
 
@@ -37,6 +38,16 @@
                         @"6",
                         @"7"
                         ];
+    NSArray *nameArray = @[@"附近门店",
+                           @"会员俱乐部",
+                           @"稀奇集中营",
+                           @"一手优品",
+                           @"旧机回收",
+                           @"九机快修",
+                           @"试用中心",
+                           @"为你优选",
+                           @"充值中心",
+                           @"全部"];
     
     SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, ScreenW, 200) delegate:_delegateVc placeholderImage:nil];
     
@@ -47,14 +58,24 @@
     
     for (int i=0; i<10; i++) {
         btn = [UIButton new];
+        nameLabel = [UILabel new];
+        
+        [self addSubview:nameLabel];
         [self addSubview:btn];
-        float size = (ScreenW - 30) / 5 ;
+        float size = (ScreenW - 100) / 5 ;
         if (i<5) {
-            btn.sd_layout.topSpaceToView(cycleScrollView,10).leftSpaceToView(self,size*i+5*(i+1)).widthIs(size).heightIs(size);
+            btn.sd_layout.topSpaceToView(cycleScrollView,10).leftSpaceToView(self,size*i+10*(2*i+1)).widthIs(size).heightIs(size);
+            nameLabel.sd_layout.topSpaceToView(btn,2).leftSpaceToView(self,size*i+10*(2*i+1)).widthIs(size).heightIs(10);
         }else{
-            btn.sd_layout.topSpaceToView(cycleScrollView,110).leftSpaceToView(self,size*(i-5)+5*(i-4)).widthIs(size).heightIs(size);
+            btn.sd_layout.topSpaceToView(cycleScrollView,110).leftSpaceToView(self,size*(i-5)+10*(2*(i-5)+1)).widthIs(size).heightIs(size);
+            nameLabel.sd_layout.topSpaceToView(btn,2).leftSpaceToView(self,size*(i-5)+10*(2*(i-5)+1)).widthIs(size).heightIs(10);
         }
         
+        nameLabel.font = [UIFont systemFontOfSize:10];
+        nameLabel.textAlignment = UITextAlignmentCenter;
+        
+        nameLabel.text = nameArray[i];
+        nameLabel.textColor = [UIColor lightGrayColor];
         btn.layer.cornerRadius = 20;
         btn.layer.masksToBounds = YES;
         
@@ -71,13 +92,23 @@
     
     NSInteger tag = btn.tag;
     NSLog(@"adfsadf");
-    GoodViewController *vc = [[GoodViewController alloc]init];
-    [_delegateVc.navigationController pushViewController:vc animated:YES];
+   
     
     
     switch (tag) {
         case 1:
-            
+        {
+            GoodViewController *vc = [[GoodViewController alloc]init];
+            [_delegateVc.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 10:
+        {
+            WebViewController *vc = [[WebViewController alloc]init];
+            vc.url = @"https://m.9ji.com/menu.aspx?from=tb10";
+            vc.title = @"贴心的九机";
+            [_delegateVc.navigationController pushViewController:vc animated:YES];
+        }
             break;
             
         default:

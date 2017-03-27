@@ -32,7 +32,7 @@
         _showLabel.sd_layout.leftSpaceToView(img,5).centerYEqualToView(img).topSpaceToView(self,3).rightSpaceToView(self,5).bottomSpaceToView(self,3);
         _showLabel.textAlignment = NSTextAlignmentLeft;
         [_showLabel setBackgroundColor:[UIColor greenColor]];
-        
+        _showLabel.alpha = 0.4;
         searchBtn = [UIButton new];
         [self addSubview:searchBtn];
         searchBtn.sd_layout.leftSpaceToView(self,0).rightSpaceToView(self,0).topSpaceToView(self,0).bottomSpaceToView(self,0);
