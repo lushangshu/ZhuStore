@@ -7,14 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PYSearch.h"    
 
-@interface SearchBarView : UIView
+@interface SearchBarView : UIView <PYSearchViewControllerDelegate >
 {
     UIButton *searchBtn;
 }
 
 @property (nonatomic,strong) UILabel *showLabel;
-
+@property (nonnull,strong) UIViewController *vc;
 -(void)setUpSearchBarView;
 
 @end

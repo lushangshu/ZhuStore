@@ -56,13 +56,11 @@
     [scanBtn addTarget:self action:@selector(jumpGoods) forControlEvents:UIControlEventTouchUpInside];
     
     searchBar = [[SearchBarView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+    searchBar.vc = self;
     [self.view addSubview:searchBar];
     searchBar.sd_layout.leftSpaceToView(locationSelect,10).topSpaceToView(self.view,20).rightSpaceToView(scanBtn,5).heightIs(40);
 
     //[searchBar setUpSearchBarView];
-    
-    
-    
     
     
 }
@@ -122,7 +120,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        return 400;
+        return 440;
     }else if(indexPath.section == 1){
         return 300;
     }

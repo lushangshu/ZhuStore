@@ -86,7 +86,7 @@
 
 -(void)downloadAdImages{
     
-    NSString *url = @"http://img2.ch999img.com//pic/edt/ad/20170310/20170310183831_0362.jpg";
+    NSString *url = @"https://img2.ch999img.com//pic/edt/ad/20170310/20170310183831_0362.jpg";
     [AdImageTool getAdvertisingImage: url];
 }
 

@@ -7,14 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BBHotTopicScroll.h"    
+
 
 @interface BannerCell : UITableViewCell
 {
     UIButton *btn;
     UILabel *nameLabel;
-    
+    UIView *lineView;
 }
 -(void)setUpUI;
 
 @property (nonatomic,strong) UIViewController *delegateVc;
+@property (nonatomic,strong) BBHotTopicScroll *sCroll;
+
 @end
