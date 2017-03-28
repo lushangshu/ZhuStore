@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TimeLimitCell : UITableViewCell
+@interface TimeLimitCell : UITableViewCell <UIScrollViewDelegate>
+{
+    NSArray *imageUrls;
+    UIScrollView *deviceGallery;
+}
 
 @property (nonatomic,strong) UIViewController *vc;
 -(void)setUpUI;

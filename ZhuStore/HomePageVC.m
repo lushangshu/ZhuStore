@@ -50,9 +50,15 @@
     [locationSelect setBackgroundColor:[UIColor blueColor]];
     //[locationSelect setBackgroundImage:[UIImage imageNamed:@"second"] forState:UIControlStateNormal];
     
+    newsBtn = [UIButton new];
+    [self.view addSubview:newsBtn];
+    newsBtn.sd_layout.rightSpaceToView(self.view,5).topSpaceToView(self.view,20).heightIs(40).widthIs(40);
+    [newsBtn setBackgroundColor:[UIColor brownColor]];
+    [newsBtn addTarget:self action:@selector(jumpToNewsVC) forControlEvents:UIControlEventTouchUpInside];
+    
     scanBtn = [UIButton new];
     [self.view addSubview:scanBtn];
-    scanBtn.sd_layout.rightSpaceToView(self.view,5).topSpaceToView(self.view,20).heightIs(40).widthIs(40);
+    scanBtn.sd_layout.rightSpaceToView(newsBtn,5).topSpaceToView(self.view,20).heightIs(40).widthIs(40);
     [scanBtn setBackgroundColor:[UIColor yellowColor]];
     [scanBtn addTarget:self action:@selector(jumpGoods) forControlEvents:UIControlEventTouchUpInside];
     
@@ -61,6 +67,8 @@
     [self.view addSubview:searchBar];
     searchBar.sd_layout.leftSpaceToView(locationSelect,10).topSpaceToView(self.view,20).rightSpaceToView(scanBtn,5).heightIs(40);
 
+    
+    
     //[searchBar setUpSearchBarView];
     
     
@@ -80,10 +88,14 @@
     
 }
 -(void)jumpGoods{
-    NSLog(@"afasdfasd");
+    NSLog(@"进入商品详情");
     GoodViewController *vc = [[GoodViewController alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
     
+}
+
+-(void)jumpToNewsVC{
+    NSLog(@"跳转到消息界面");
 }
 #pragma mark - contentOffset Calculation
 

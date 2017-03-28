@@ -27,6 +27,7 @@
 		350DA6351E89165D00398DB5 /* UIView+PYSearchExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DA62E1E89165D00398DB5 /* UIView+PYSearchExtension.m */; };
 		356F8BE41E8A159100D2459B /* TimeLimitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F8BE31E8A159100D2459B /* TimeLimitCell.m */; };
 		356F8BE71E8A173500D2459B /* NavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F8BE61E8A173500D2459B /* NavBarView.m */; };
+		356F8BEA1E8A530600D2459B /* SepLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F8BE91E8A530600D2459B /* SepLineView.m */; };
 		35EE69A51E816073005CEEEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE69A41E816073005CEEEC /* main.m */; };
 		35EE69A81E816073005CEEEC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE69A71E816073005CEEEC /* AppDelegate.m */; };
 		35EE69AB1E816073005CEEEC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE69AA1E816073005CEEEC /* ViewController.m */; };
@@ -127,6 +128,8 @@
 		356F8BE31E8A159100D2459B /* TimeLimitCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLimitCell.m; sourceTree = "<group>"; };
 		356F8BE51E8A173500D2459B /* NavBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavBarView.h; sourceTree = "<group>"; };
 		356F8BE61E8A173500D2459B /* NavBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavBarView.m; sourceTree = "<group>"; };
+		356F8BE81E8A530600D2459B /* SepLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SepLineView.h; sourceTree = "<group>"; };
+		356F8BE91E8A530600D2459B /* SepLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SepLineView.m; sourceTree = "<group>"; };
 		35EE69A01E816073005CEEEC /* ZhuStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhuStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35EE69A41E816073005CEEEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35EE69A61E816073005CEEEC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -304,6 +307,17 @@
 			name = PYSearch;
 			sourceTree = "<group>";
 		};
+		356F8BEB1E8A531100D2459B /* View+Utils */ = {
+			isa = PBXGroup;
+			children = (
+				356F8BE81E8A530600D2459B /* SepLineView.h */,
+				356F8BE91E8A530600D2459B /* SepLineView.m */,
+				356F8BE51E8A173500D2459B /* NavBarView.h */,
+				356F8BE61E8A173500D2459B /* NavBarView.m */,
+			);
+			name = "View+Utils";
+			sourceTree = "<group>";
+		};
 		35EE69971E816073005CEEEC = {
 			isa = PBXGroup;
 			children = (
@@ -332,8 +346,7 @@
 				35EE69A71E816073005CEEEC /* AppDelegate.m */,
 				35EE69A91E816073005CEEEC /* ViewController.h */,
 				35EE69AA1E816073005CEEEC /* ViewController.m */,
-				356F8BE51E8A173500D2459B /* NavBarView.h */,
-				356F8BE61E8A173500D2459B /* NavBarView.m */,
+				356F8BEB1E8A531100D2459B /* View+Utils */,
 				350DA6171E890D9C00398DB5 /* WebView */,
 				350DA6161E88F51E00398DB5 /* UserInfo */,
 				35EE6A4B1E837C74005CEEEC /* startUpAds */,
@@ -726,6 +739,7 @@
 				35EE69A81E816073005CEEEC /* AppDelegate.m in Sources */,
 				35EE69A51E816073005CEEEC /* main.m in Sources */,
 				350DA6321E89165D00398DB5 /* PYSearchSuggestionViewController.m in Sources */,
+				356F8BEA1E8A530600D2459B /* SepLineView.m in Sources */,
 				35EE6A1C1E820B61005CEEEC /* UIImage+GIF.m in Sources */,
 				35EE6A471E825454005CEEEC /* SearchBarView.m in Sources */,
 				350DA6121E88E57E00398DB5 /* WebViewController.m in Sources */,

@@ -19,6 +19,7 @@
     
     UIButton *locationSelect;
     UIButton *scanBtn;
+    UIButton *newsBtn;
     SearchBarView *searchBar;
     
 }
