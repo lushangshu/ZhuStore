@@ -15,6 +15,7 @@
     UIButton *btn;
     UILabel *nameLabel;
     UIView *lineView;
+    UIImageView *btnImage;
 }
 -(void)setUpUI;
 

@@ -10,6 +10,7 @@
 #import "SDCycleScrollView.h"
 #import "GoodViewController.h"
 #import "WebViewController.h"
+#import "UIImageView+WebCache.h"
 
 @implementation BannerCell
 
@@ -30,6 +31,17 @@
                       @"https://img2.ch999img.com//pic/edt/ad/20170318/20170318165645_2423.jpg",
                       @"https://img2.ch999img.com//pic/edt/ad/20170317/20170317165027_4831.jpg"
                       ];
+    NSArray *iconUrls = @[@"https://img2.ch999img.com/pic/clientimg/201703100913060.png",
+                           @"https://img2.ch999img.com/pic/clientimg/201703100913140.png",
+                           @"https://img2.ch999img.com/pic/clientimg/201703100913220.png",
+                           @"https://img2.ch999img.com/pic/clientimg/201703100913370.png",
+                           @"https://img2.ch999img.com/pic/clientimg/201703100913450.png",
+                           @"https://img2.ch999img.com/pic/clientimg/201703100913520.png",
+                           @"https://img2.ch999img.com/pic/clientimg/201703130331380.png",
+                           @"https://img2.ch999img.com/pic/clientimg/201703100914270.png",
+                           @"https://img2.ch999img.com/pic/clientimg/201703270451290.png",
+                           @"https://img2.ch999img.com/pic/clientimg/201703100914450.png"];
+    
     NSArray *titles = @[@"1",
                         @"2",
                         @"3",
@@ -56,39 +68,48 @@
     
     [self addSubview:cycleScrollView];
     
+    lineView = [UIView new];
+    [self addSubview:lineView];
+    
     for (int i=0; i<10; i++) {
         btn = [UIButton new];
+        btnImage = [UIImageView new];
         nameLabel = [UILabel new];
         
         [self addSubview:nameLabel];
+        [self addSubview:btnImage];
         [self addSubview:btn];
-        float size = (ScreenW - 100) / 5 ;
+        float space = 15;
+        float size = (ScreenW - space*10) / 5 ;
         if (i<5) {
-            btn.sd_layout.topSpaceToView(cycleScrollView,10).leftSpaceToView(self,size*i+10*(2*i+1)).widthIs(size).heightIs(size);
-            nameLabel.sd_layout.topSpaceToView(btn,2).leftSpaceToView(self,size*i+10*(2*i+1)).widthIs(size).heightIs(10);
+            btnImage.sd_layout.topSpaceToView(cycleScrollView,10).leftSpaceToView(self,size*i+space*(2*i+1)).widthIs(size).heightIs(size);
+            btn.sd_layout.topSpaceToView(cycleScrollView,space).leftSpaceToView(self,size*i+space*(2*i+1)).widthIs(size).heightIs(size);
+            nameLabel.sd_layout.topSpaceToView(btn,2).leftSpaceToView(self,size*i+space*(2*i+1)).widthIs(size).heightIs(10);
         }else{
-            btn.sd_layout.topSpaceToView(cycleScrollView,110).leftSpaceToView(self,size*(i-5)+10*(2*(i-5)+1)).widthIs(size).heightIs(size);
-            nameLabel.sd_layout.topSpaceToView(btn,2).leftSpaceToView(self,size*(i-5)+10*(2*(i-5)+1)).widthIs(size).heightIs(10);
+            btnImage.sd_layout.topSpaceToView(cycleScrollView,2*size).leftSpaceToView(self,size*(i-5)+space*(2*(i-5)+1)).widthIs(size).heightIs(size);
+            btn.sd_layout.topSpaceToView(cycleScrollView,size*2).leftSpaceToView(self,size*(i-5)+space*(2*(i-5)+1)).widthIs(size).heightIs(size);
+            nameLabel.sd_layout.topSpaceToView(btn,2).leftSpaceToView(self,size*(i-5)+space*(2*(i-5)+1)).widthIs(size).heightIs(10);
+            if (i==9) {
+                lineView.sd_layout.leftSpaceToView(self,0).topSpaceToView(nameLabel,10).widthIs(ScreenW).heightIs(0.3);
+                lineView.backgroundColor = [UIColor lightGrayColor];
+            }
         }
         
         nameLabel.font = [UIFont systemFontOfSize:10];
         nameLabel.textAlignment = UITextAlignmentCenter;
-        
+        nameLabel.adjustsFontSizeToFitWidth = YES;
         nameLabel.text = nameArray[i];
         nameLabel.textColor = [UIColor lightGrayColor];
+        [btnImage sd_setImageWithURL:[NSURL URLWithString:iconUrls[i]] placeholderImage:nil];
         btn.layer.cornerRadius = 20;
         btn.layer.masksToBounds = YES;
-        
-        btn.backgroundColor = [UIColor yellowColor];
         
         btn.tag = i+1;
         [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     }
     
-    lineView = [UIView new];
-    [self addSubview:lineView];
-    lineView.sd_layout.leftSpaceToView(self,0).topSpaceToView(cycleScrollView,200).widthIs(ScreenW).heightIs(0.5);
-    lineView.backgroundColor = [UIColor lightGrayColor];
+    
+    
     
     [self createScrollView];
     

@@ -7,16 +7,26 @@
 //
 
 #import "WebViewController.h"
+#import "NavBarView.h"
 
 @interface WebViewController () <UIWebViewDelegate>
 
 @end
 
 @implementation WebViewController
+-(void)viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:YES];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
+    NavBarView *navBar = [[NavBarView alloc]initWithFrame:CGRectMake(0, 0, ScreenW, 64)];
+    navBar.title = self.webTitle;
+    navBar.vc = self;
+    [navBar.goBackBtn addTarget:self action:@selector(goBackVC) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:navBar];
+    
     //self.title = @"打开网页";
     // Do any additional setup after loading the view.
     progressView = [UIProgressView new];
@@ -27,7 +37,7 @@
     
     progressView.backgroundColor = [UIColor greenColor];
     progressView.tintColor = [UIColor yellowColor];
-    progressView.sd_layout.leftSpaceToView(self.view,0).topSpaceToView(self.view,0).widthIs(ScreenW).heightIs(10);
+    progressView.sd_layout.leftSpaceToView(self.view,0).topSpaceToView(navBar,0).widthIs(ScreenW).heightIs(10);
     webView.sd_layout.leftSpaceToView(self.view,0).rightSpaceToView(self.view,0).bottomSpaceToView(self.view,0).topSpaceToView(progressView,0);
     
     [webView setBackgroundColor:[UIColor whiteColor]];
@@ -67,6 +77,10 @@
             progressView.progress = 0.95;
         }
     }
+}
+
+-(void)goBackVC{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - webview delegate

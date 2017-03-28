@@ -8,8 +8,9 @@
 
 #import "HomePageVC.h"
 #import "GoodViewController.h"
-
+#import "WebViewController.h"
 #import "BannerCell.h"
+#import "TimeLimitCell.h"
 
 @interface HomePageVC ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 
@@ -101,26 +102,32 @@
     return 1;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    //UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     
-    BannerCell *cell = [[BannerCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    
     if (indexPath.section == 0) {
+        BannerCell *cell = [[BannerCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
         [cell setUpUI];
         cell.delegateVc = self;
         
-        
+        return cell;
     }else if(indexPath.section == 1){
-        //
+        TimeLimitCell *cell = [[TimeLimitCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"timeLimitCell"];
+        [cell setUpUI];
+        cell.vc = self;
+        
+        return cell;
     }else if(indexPath.section == 2){
         //
     }
+    
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        return 440;
+        return 400;
     }else if(indexPath.section == 1){
         return 300;
     }
@@ -128,6 +135,15 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 10;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 1) {
+        WebViewController *vc = [[WebViewController alloc] init];
+        vc.url = @"https://m.9ji.com/appRush.aspx";
+        vc.webTitle =@"限时抢购";
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 
