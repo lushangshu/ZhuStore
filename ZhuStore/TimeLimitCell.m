@@ -85,6 +85,16 @@
         [image sd_setImageWithURL:[NSURL URLWithString:imageUrls[i]] placeholderImage:nil];
         
         [deviceGallery addSubview:image];
+        
+        UIButton *btn = [UIButton new];
+        [deviceGallery addSubview:btn];
+        
+        UILabel *nameLabel = [UILabel new];
+        [deviceGallery addSubview:nameLabel];
+        
+        UILabel *priceLabel = [UILabel new];
+        [deviceGallery addSubview:priceLabel];
+        
     }
     
     deviceGallery.showsHorizontalScrollIndicator = NO;
