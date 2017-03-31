@@ -28,6 +28,7 @@
 		356F8BE41E8A159100D2459B /* TimeLimitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F8BE31E8A159100D2459B /* TimeLimitCell.m */; };
 		356F8BE71E8A173500D2459B /* NavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F8BE61E8A173500D2459B /* NavBarView.m */; };
 		356F8BEA1E8A530600D2459B /* SepLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F8BE91E8A530600D2459B /* SepLineView.m */; };
+		356F8BEE1E8E5A6C00D2459B /* SpecialGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F8BED1E8E5A6C00D2459B /* SpecialGoodsCell.m */; };
 		35EE69A51E816073005CEEEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE69A41E816073005CEEEC /* main.m */; };
 		35EE69A81E816073005CEEEC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE69A71E816073005CEEEC /* AppDelegate.m */; };
 		35EE69AB1E816073005CEEEC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE69AA1E816073005CEEEC /* ViewController.m */; };
@@ -130,6 +131,8 @@
 		356F8BE61E8A173500D2459B /* NavBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavBarView.m; sourceTree = "<group>"; };
 		356F8BE81E8A530600D2459B /* SepLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SepLineView.h; sourceTree = "<group>"; };
 		356F8BE91E8A530600D2459B /* SepLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SepLineView.m; sourceTree = "<group>"; };
+		356F8BEC1E8E5A6C00D2459B /* SpecialGoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialGoodsCell.h; sourceTree = "<group>"; };
+		356F8BED1E8E5A6C00D2459B /* SpecialGoodsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialGoodsCell.m; sourceTree = "<group>"; };
 		35EE69A01E816073005CEEEC /* ZhuStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhuStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35EE69A41E816073005CEEEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35EE69A61E816073005CEEEC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -534,6 +537,8 @@
 				350DA6071E84F8D800398DB5 /* BannerCell.m */,
 				356F8BE21E8A159100D2459B /* TimeLimitCell.h */,
 				356F8BE31E8A159100D2459B /* TimeLimitCell.m */,
+				356F8BEC1E8E5A6C00D2459B /* SpecialGoodsCell.h */,
+				356F8BED1E8E5A6C00D2459B /* SpecialGoodsCell.m */,
 				35EE6A3F1E822748005CEEEC /* FunctionBtnsView.h */,
 				35EE6A401E822748005CEEEC /* FunctionBtnsView.m */,
 				35EE6A421E82275A005CEEEC /* TopNewsView.h */,
@@ -718,6 +723,7 @@
 				35EE6A211E820B61005CEEEC /* UIView+WebCacheOperation.m in Sources */,
 				35EE6A2C1E820B84005CEEEC /* SDCycleScrollView.m in Sources */,
 				35EE6A1D1E820B61005CEEEC /* UIImage+MultiFormat.m in Sources */,
+				356F8BEE1E8E5A6C00D2459B /* SpecialGoodsCell.m in Sources */,
 				350DA6351E89165D00398DB5 /* UIView+PYSearchExtension.m in Sources */,
 				35EE6A3E1E821B5C005CEEEC /* TAPageControl.m in Sources */,
 				35EE69DF1E8161A9005CEEEC /* GoodViewController.m in Sources */,

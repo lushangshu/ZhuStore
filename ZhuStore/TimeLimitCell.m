@@ -38,7 +38,7 @@
     [subLabel setText:@"正在进行"];
     [nameLabel setTextColor:[UIColor redColor]];
     [subLabel setTextColor:[UIColor redColor]];
-    [subLabel setFont:[UIFont systemFontOfSize:16 weight:2]];
+    [subLabel setFont:[UIFont systemFontOfSize:15 weight:1]];
     [subLabel setTextAlignment:NSTextAlignmentLeft];
     
     nameLabel.sd_layout.leftSpaceToView(self,5).topSpaceToView(self,5).widthIs(100).heightIs(40);
@@ -77,7 +77,7 @@
     deviceGallery = [UIScrollView new];
     [self addSubview:deviceGallery];
     deviceGallery.sd_layout.leftSpaceToView(self,0).widthIs(ScreenW).topSpaceToView(self,47).heightIs(180);
-    [deviceGallery setContentSize:CGSizeMake(imageUrls.count * 130, 0)];
+    [deviceGallery setContentSize:CGSizeMake(imageUrls.count * 120, 0)];
     [deviceGallery setBackgroundColor:[UIColor whiteColor]];
     
     for (int i=0 ; i<imageUrls.count; i++) {
@@ -86,15 +86,38 @@
         
         [deviceGallery addSubview:image];
         
-        UIButton *btn = [UIButton new];
+        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(i*130, 0, 120, 180)];
         [deviceGallery addSubview:btn];
         
         UILabel *nameLabel = [UILabel new];
         [deviceGallery addSubview:nameLabel];
+        nameLabel.sd_layout.topSpaceToView(image,5).leftEqualToView(image).widthIs(120).heightIs(20);
+        nameLabel.textColor = [UIColor lightGrayColor];
+        nameLabel.font = [UIFont systemFontOfSize:12];
+        nameLabel.text = @"iPhone 7 双网通玫瑰金瑟";
+        nameLabel.textAlignment = NSTextAlignmentCenter;
         
         UILabel *priceLabel = [UILabel new];
         [deviceGallery addSubview:priceLabel];
+        priceLabel.sd_layout.topSpaceToView(nameLabel,2).centerXEqualToView(image).widthIs(100).heightIs(20);
+        priceLabel.textAlignment = NSTextAlignmentCenter;
+        priceLabel.textColor = [UIColor whiteColor];
+        priceLabel.text = @"￥4499.0";
+        priceLabel.backgroundColor = [UIColor redColor];
+        priceLabel.layer.cornerRadius = 5;
+        priceLabel.layer.masksToBounds =YES;
         
+        UILabel *originPriceLabel = [UILabel new];
+        [deviceGallery addSubview:originPriceLabel];
+        originPriceLabel.sd_layout.topSpaceToView(priceLabel,2).leftEqualToView(image).widthIs(120).heightIs(10);
+        originPriceLabel.textColor = [UIColor lightGrayColor];
+        originPriceLabel.textAlignment = NSTextAlignmentCenter;
+        originPriceLabel.font = [UIFont systemFontOfSize:9];
+        
+        NSMutableAttributedString *attri = [[NSMutableAttributedString alloc] initWithString:@"￥5999.0"];
+        [attri addAttribute:NSStrikethroughStyleAttributeName value:@(NSUnderlinePatternSolid | NSUnderlineStyleSingle) range:NSMakeRange(0, attri.length)];
+        [attri addAttribute:NSStrikethroughColorAttributeName value:[UIColor lightGrayColor] range:NSMakeRange(0, attri.length)];
+        [originPriceLabel setAttributedText:attri];
     }
     
     deviceGallery.showsHorizontalScrollIndicator = NO;
