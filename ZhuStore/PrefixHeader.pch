@@ -11,8 +11,8 @@
 
 #ifdef __OBJC__
 
+#import "UIImageView+WebCache.h"
 #import "SDAutoLayout.h"
-#import "SDWebImage/UIImageView+WebCache.h"
 #import "NavBarView.h"
 
 #endif
@@ -22,8 +22,8 @@
 #pragma mark - color define
 
 #define COrange [UIColor colorWithRed:210/255 green:100/255 blue:54/255 alpha:1.0]
-
-
+#define CSepLine [UIColor colorWithRed:247.0/255 green:247.0/255 blue:247.0/255 alpha:1.0]
+#define sysRed [UIColor colorWithRed:255.0/255 green:70.0/255 blue:31.0/255 alpha:1.0] //朱砂红
 
 #pragma mark - layout define
 

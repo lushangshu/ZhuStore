@@ -29,6 +29,8 @@
 		356F8BE71E8A173500D2459B /* NavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F8BE61E8A173500D2459B /* NavBarView.m */; };
 		356F8BEA1E8A530600D2459B /* SepLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F8BE91E8A530600D2459B /* SepLineView.m */; };
 		356F8BEE1E8E5A6C00D2459B /* SpecialGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F8BED1E8E5A6C00D2459B /* SpecialGoodsCell.m */; };
+		356F8BF11E94D95700D2459B /* NormalAdsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F8BF01E94D95700D2459B /* NormalAdsCell.m */; };
+		356F8BF51E96275600D2459B /* WearbleDeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F8BF41E96275600D2459B /* WearbleDeviceCell.m */; };
 		35EE69A51E816073005CEEEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE69A41E816073005CEEEC /* main.m */; };
 		35EE69A81E816073005CEEEC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE69A71E816073005CEEEC /* AppDelegate.m */; };
 		35EE69AB1E816073005CEEEC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE69AA1E816073005CEEEC /* ViewController.m */; };
@@ -133,6 +135,10 @@
 		356F8BE91E8A530600D2459B /* SepLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SepLineView.m; sourceTree = "<group>"; };
 		356F8BEC1E8E5A6C00D2459B /* SpecialGoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialGoodsCell.h; sourceTree = "<group>"; };
 		356F8BED1E8E5A6C00D2459B /* SpecialGoodsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialGoodsCell.m; sourceTree = "<group>"; };
+		356F8BEF1E94D95700D2459B /* NormalAdsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalAdsCell.h; sourceTree = "<group>"; };
+		356F8BF01E94D95700D2459B /* NormalAdsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalAdsCell.m; sourceTree = "<group>"; };
+		356F8BF31E96275600D2459B /* WearbleDeviceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WearbleDeviceCell.h; sourceTree = "<group>"; };
+		356F8BF41E96275600D2459B /* WearbleDeviceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WearbleDeviceCell.m; sourceTree = "<group>"; };
 		35EE69A01E816073005CEEEC /* ZhuStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhuStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35EE69A41E816073005CEEEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35EE69A61E816073005CEEEC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -539,6 +545,10 @@
 				356F8BE31E8A159100D2459B /* TimeLimitCell.m */,
 				356F8BEC1E8E5A6C00D2459B /* SpecialGoodsCell.h */,
 				356F8BED1E8E5A6C00D2459B /* SpecialGoodsCell.m */,
+				356F8BF31E96275600D2459B /* WearbleDeviceCell.h */,
+				356F8BF41E96275600D2459B /* WearbleDeviceCell.m */,
+				356F8BEF1E94D95700D2459B /* NormalAdsCell.h */,
+				356F8BF01E94D95700D2459B /* NormalAdsCell.m */,
 				35EE6A3F1E822748005CEEEC /* FunctionBtnsView.h */,
 				35EE6A401E822748005CEEEC /* FunctionBtnsView.m */,
 				35EE6A421E82275A005CEEEC /* TopNewsView.h */,
@@ -715,6 +725,8 @@
 				350DA61D1E890E6900398DB5 /* BBHotTopicScroll.m in Sources */,
 				350DA6081E84F8D800398DB5 /* BannerCell.m in Sources */,
 				35EE6A2D1E820B84005CEEEC /* UIView+SDExtension.m in Sources */,
+				356F8BF51E96275600D2459B /* WearbleDeviceCell.m in Sources */,
+				356F8BF11E94D95700D2459B /* NormalAdsCell.m in Sources */,
 				35EE69E81E816260005CEEEC /* UIView+SDAutoLayout.m in Sources */,
 				35EE6A171E820B61005CEEEC /* SDWebImageDownloader.m in Sources */,
 				35EE6A121E820B61005CEEEC /* MKAnnotationView+WebCache.m in Sources */,
@@ -901,7 +913,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4HE4G9ZA7M;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/zhuzai/Documents/HomeServer/Fake9Ji/ZhuStore/ZhuStore/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZhuStore/PrefixHeader.pch";
 				INFOPLIST_FILE = ZhuStore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -916,7 +928,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4HE4G9ZA7M;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/zhuzai/Documents/HomeServer/Fake9Ji/ZhuStore/ZhuStore/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZhuStore/PrefixHeader.pch";
 				INFOPLIST_FILE = ZhuStore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

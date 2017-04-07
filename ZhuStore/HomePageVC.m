@@ -11,6 +11,8 @@
 #import "WebViewController.h"
 #import "BannerCell.h"
 #import "TimeLimitCell.h"
+#import "NormalAdsCell.h"
+#import "WearbleDeviceCell.h"
 
 @interface HomePageVC ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 
@@ -39,7 +41,7 @@
     
     navBar = [UIView new];
     [self.view addSubview:navBar];
-    [navBar setBackgroundColor:COrange];
+    [navBar setBackgroundColor:sysRed];
     
     navBar.sd_layout.leftSpaceToView(self.view,0).rightSpaceToView(self.view,0).topSpaceToView(self.view,0).heightIs(64);
     navBar.alpha = 0;
@@ -114,27 +116,55 @@
     return 1;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     
     
-    if (indexPath.section == 0) {
-        BannerCell *cell = [[BannerCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-        [cell setUpUI];
-        cell.delegateVc = self;
-        
-        return cell;
-    }else if(indexPath.section == 1){
-        TimeLimitCell *cell = [[TimeLimitCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"timeLimitCell"];
-        [cell setUpUI];
-        cell.vc = self;
-        
-        return cell;
-    }else if(indexPath.section == 2){
-        //
+    NSString *CellIdentifier = [NSString stringWithFormat:@"Cell%ld%ld", (long)[indexPath section], (long)[indexPath row]];//以indexPath来唯一确定cell
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier]; //出列可重用的cell
+    if (cell == nil) {
+        if (indexPath.section == 0) {
+            
+            BannerCell *cell = [[BannerCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.delegateVc = self;
+            
+            return cell;
+            
+            
+        }else if(indexPath.section == 1){
+            
+            TimeLimitCell *cell = [[TimeLimitCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.vc = self;
+            
+            return cell;
+            
+            
+        }else if(indexPath.section == 2){
+            
+            NormalAdsCell *cell = [[NormalAdsCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.vc = self;
+            return cell;
+            
+            
+            
+        }else if(indexPath.section == 3){
+            
+            WearbleDeviceCell *cell = [[WearbleDeviceCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.vc = self;
+            return cell;
+            
+            
+        }else{
+            UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            return cell;
+        }
     }
     
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
+
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -142,6 +172,10 @@
         return 400;
     }else if(indexPath.section == 1){
         return 230;
+    }else if(indexPath.section == 2){
+        return 400;
+    }else if(indexPath.section == 3){
+        return 460;
     }
     return 100;
 }

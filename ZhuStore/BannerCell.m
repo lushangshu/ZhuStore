@@ -14,6 +14,15 @@
 
 @implementation BannerCell
 
+-(id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        [self setUpUI];
+    }
+    
+    return self;
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
