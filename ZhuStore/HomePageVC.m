@@ -17,6 +17,7 @@
 #import "AlwaysSurpriseCell.h"
 #import "FunthinsCell.h"
 #import "MarketCell.h"
+#import "RecommandGoodsCell.h"
 
 @interface HomePageVC ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 
@@ -185,6 +186,12 @@
             
             cell.vc = self;
             return cell;
+        }else if(indexPath.section == 8){
+            RecommandGoodsCell *cell = [[RecommandGoodsCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            
+            cell.vc = self;
+            return cell;
         }
         else{
             UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
@@ -213,6 +220,8 @@
         return 310;
     }else if(indexPath.section == 7){
         return 160;
+    }else if(indexPath.section ==8){
+        return 890;
     }
     return 100;
 }

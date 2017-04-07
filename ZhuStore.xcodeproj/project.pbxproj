@@ -35,6 +35,8 @@
 		356F8BFB1E97486800D2459B /* AlwaysSurpriseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F8BFA1E97486800D2459B /* AlwaysSurpriseCell.m */; };
 		356F8BFE1E9749D700D2459B /* FunthinsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F8BFD1E9749D700D2459B /* FunthinsCell.m */; };
 		356F8C011E97504300D2459B /* MarketCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F8C001E97504300D2459B /* MarketCell.m */; };
+		356F8C041E97744B00D2459B /* RecommandGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F8C031E97744B00D2459B /* RecommandGoodsCell.m */; };
+		356F8C071E9777C100D2459B /* GoodSingleCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F8C061E9777C100D2459B /* GoodSingleCollectionCell.m */; };
 		35EE69A51E816073005CEEEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE69A41E816073005CEEEC /* main.m */; };
 		35EE69A81E816073005CEEEC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE69A71E816073005CEEEC /* AppDelegate.m */; };
 		35EE69AB1E816073005CEEEC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE69AA1E816073005CEEEC /* ViewController.m */; };
@@ -151,6 +153,10 @@
 		356F8BFD1E9749D700D2459B /* FunthinsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunthinsCell.m; sourceTree = "<group>"; };
 		356F8BFF1E97504300D2459B /* MarketCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketCell.h; sourceTree = "<group>"; };
 		356F8C001E97504300D2459B /* MarketCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketCell.m; sourceTree = "<group>"; };
+		356F8C021E97744B00D2459B /* RecommandGoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommandGoodsCell.h; sourceTree = "<group>"; };
+		356F8C031E97744B00D2459B /* RecommandGoodsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommandGoodsCell.m; sourceTree = "<group>"; };
+		356F8C051E9777C100D2459B /* GoodSingleCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodSingleCollectionCell.h; sourceTree = "<group>"; };
+		356F8C061E9777C100D2459B /* GoodSingleCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodSingleCollectionCell.m; sourceTree = "<group>"; };
 		35EE69A01E816073005CEEEC /* ZhuStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhuStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35EE69A41E816073005CEEEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35EE69A61E816073005CEEEC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -567,6 +573,10 @@
 				356F8BFD1E9749D700D2459B /* FunthinsCell.m */,
 				356F8BFF1E97504300D2459B /* MarketCell.h */,
 				356F8C001E97504300D2459B /* MarketCell.m */,
+				356F8C021E97744B00D2459B /* RecommandGoodsCell.h */,
+				356F8C031E97744B00D2459B /* RecommandGoodsCell.m */,
+				356F8C051E9777C100D2459B /* GoodSingleCollectionCell.h */,
+				356F8C061E9777C100D2459B /* GoodSingleCollectionCell.m */,
 				356F8BEF1E94D95700D2459B /* NormalAdsCell.h */,
 				356F8BF01E94D95700D2459B /* NormalAdsCell.m */,
 				35EE6A3F1E822748005CEEEC /* FunctionBtnsView.h */,
@@ -771,6 +781,7 @@
 				350DA62F1E89165D00398DB5 /* NSBundle+PYSearchExtension.m in Sources */,
 				35EE69EE1E8168FC005CEEEC /* ClassifyVC.m in Sources */,
 				35EE6A1B1E820B61005CEEEC /* UIButton+WebCache.m in Sources */,
+				356F8C071E9777C100D2459B /* GoodSingleCollectionCell.m in Sources */,
 				35EE69D81E8160B3005CEEEC /* MainTabbarViewController.m in Sources */,
 				356F8BE41E8A159100D2459B /* TimeLimitCell.m in Sources */,
 				35EE6A311E820BCD005CEEEC /* BannerScrollView.m in Sources */,
@@ -789,6 +800,7 @@
 				35EE6A131E820B61005CEEEC /* NSData+ImageContentType.m in Sources */,
 				35EE6A1E1E820B61005CEEEC /* UIImage+WebP.m in Sources */,
 				35EE6A4A1E837C68005CEEEC /* StartUpAdsVC.m in Sources */,
+				356F8C041E97744B00D2459B /* RecommandGoodsCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
