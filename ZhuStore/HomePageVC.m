@@ -13,6 +13,10 @@
 #import "TimeLimitCell.h"
 #import "NormalAdsCell.h"
 #import "WearbleDeviceCell.h"
+#import "TodaySpecialCell.h"
+#import "AlwaysSurpriseCell.h"
+#import "FunthinsCell.h"
+#import "MarketCell.h"
 
 @interface HomePageVC ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 
@@ -81,7 +85,7 @@
     mainTable.delegate = self;
     mainTable.dataSource = self;
     mainTable.showsVerticalScrollIndicator = NO;
-    mainTable.sd_layout.topSpaceToView(self.view,0).leftSpaceToView(self.view,0).rightSpaceToView(self.view,0).bottomSpaceToView(self.view,0);
+    mainTable.sd_layout.topSpaceToView(self.view,0).leftSpaceToView(self.view,0).rightSpaceToView(self.view,0).bottomSpaceToView(self.view,44);
     
     [self createNavBar];
     
@@ -156,8 +160,33 @@
             cell.vc = self;
             return cell;
             
+        }else if(indexPath.section == 4){
+            TodaySpecialCell *cell = [[TodaySpecialCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.vc = self;
             
-        }else{
+            return cell;
+        
+        }else if(indexPath.section == 5){
+            AlwaysSurpriseCell *cell = [[AlwaysSurpriseCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.vc = self;
+            
+            return cell;
+        }else if(indexPath.section == 6){
+            FunthinsCell *cell = [[FunthinsCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.vc = self;
+            
+            return cell;
+        }else if(indexPath.section == 7){
+            MarketCell *cell = [[MarketCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            
+            cell.vc = self;
+            return cell;
+        }
+        else{
             UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
             return cell;
         }
@@ -175,7 +204,15 @@
     }else if(indexPath.section == 2){
         return 400;
     }else if(indexPath.section == 3){
-        return 460;
+        return 385;
+    }else if (indexPath.section ==4){
+        return 530;
+    }else if (indexPath.section ==5){
+        return 385;
+    }else if(indexPath.section == 6){
+        return 310;
+    }else if(indexPath.section == 7){
+        return 160;
     }
     return 100;
 }

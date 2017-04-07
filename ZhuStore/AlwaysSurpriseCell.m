@@ -1,14 +1,14 @@
 //
-//  WearbleDeviceCell.m
+//  AlwaysSurpriseCell.m
 //  ZhuStore
 //
-//  Created by zhuzai on 17/4/6.
+//  Created by zhuzai on 17/4/7.
 //  Copyright © 2017年 zhuzai. All rights reserved.
 //
 
-#import "WearbleDeviceCell.h"
+#import "AlwaysSurpriseCell.h"
 #import "SepLineView.h"
-@implementation WearbleDeviceCell
+@implementation AlwaysSurpriseCell
 
 -(id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -27,7 +27,7 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 -(void)setUpUI{
@@ -49,15 +49,15 @@
     UILabel *title = [UILabel new];
     [self addSubview:title];
     title.sd_layout.leftSpaceToView(colorView,15).topSpaceToView(self,5).bottomSpaceToView(sepLine,5).widthIs(100);
-    title.text = @"掌上专享";
+    title.text = @"总有惊喜";
     title.font = [UIFont systemFontOfSize:18 weight:3];
     
     
-    imageUrls = @[@"https://img2.ch999img.com/pic/clientimg/201703210956050.jpg",
-                @"https://img2.ch999img.com/pic/clientimg/201703210956130.jpg",
-                @"https://img2.ch999img.com/pic/clientimg/201703210956200.jpg",
-                @"https://img2.ch999img.com/pic/clientimg/201703210956280.jpg",
-                @"https://img2.ch999img.com/pic/clientimg/201703210956400.jpg"];
+    imageUrls = @[@"https://img2.ch999img.com/pic/clientimg/201703081005070.jpg",
+                  @"https://img2.ch999img.com/pic/clientimg/201703140517040.jpg",
+                  @"https://img2.ch999img.com/pic/clientimg/201703091203150.jpg",
+                  @"https://img2.ch999img.com/pic/clientimg/201703220925100.jpg",
+                  @"https://img2.ch999img.com/pic/clientimg/201703100553400.jpg"];
     
     NSArray *imgs =  @[@"img_1",@"img_2",@"img_3",@"img_4",@"img_5"];
     
@@ -87,7 +87,8 @@
     [img_5 sd_setImageWithURL:imageUrls[4] placeholderImage:nil];
     
     [self setBackgroundColor:[UIColor lightGrayColor]];
-
+    
 }
+
 
 @end
