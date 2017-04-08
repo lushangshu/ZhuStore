@@ -37,6 +37,9 @@
 		356F8C011E97504300D2459B /* MarketCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F8C001E97504300D2459B /* MarketCell.m */; };
 		356F8C041E97744B00D2459B /* RecommandGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F8C031E97744B00D2459B /* RecommandGoodsCell.m */; };
 		356F8C071E9777C100D2459B /* GoodSingleCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F8C061E9777C100D2459B /* GoodSingleCollectionCell.m */; };
+		356F8C0A1E987E1A00D2459B /* LeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F8C091E987E1A00D2459B /* LeftTableViewCell.m */; };
+		356F8C0D1E987E7A00D2459B /* ClassifyDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F8C0C1E987E7A00D2459B /* ClassifyDataModel.m */; };
+		356F8C101E988A7700D2459B /* RightTableTopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F8C0F1E988A7700D2459B /* RightTableTopCell.m */; };
 		35EE69A51E816073005CEEEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE69A41E816073005CEEEC /* main.m */; };
 		35EE69A81E816073005CEEEC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE69A71E816073005CEEEC /* AppDelegate.m */; };
 		35EE69AB1E816073005CEEEC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE69AA1E816073005CEEEC /* ViewController.m */; };
@@ -157,6 +160,12 @@
 		356F8C031E97744B00D2459B /* RecommandGoodsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommandGoodsCell.m; sourceTree = "<group>"; };
 		356F8C051E9777C100D2459B /* GoodSingleCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodSingleCollectionCell.h; sourceTree = "<group>"; };
 		356F8C061E9777C100D2459B /* GoodSingleCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodSingleCollectionCell.m; sourceTree = "<group>"; };
+		356F8C081E987E1A00D2459B /* LeftTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftTableViewCell.h; sourceTree = "<group>"; };
+		356F8C091E987E1A00D2459B /* LeftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftTableViewCell.m; sourceTree = "<group>"; };
+		356F8C0B1E987E7A00D2459B /* ClassifyDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassifyDataModel.h; sourceTree = "<group>"; };
+		356F8C0C1E987E7A00D2459B /* ClassifyDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassifyDataModel.m; sourceTree = "<group>"; };
+		356F8C0E1E988A7700D2459B /* RightTableTopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightTableTopCell.h; sourceTree = "<group>"; };
+		356F8C0F1E988A7700D2459B /* RightTableTopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightTableTopCell.m; sourceTree = "<group>"; };
 		35EE69A01E816073005CEEEC /* ZhuStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhuStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35EE69A41E816073005CEEEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35EE69A61E816073005CEEEC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -478,6 +487,12 @@
 			children = (
 				35EE69EC1E8168FC005CEEEC /* ClassifyVC.h */,
 				35EE69ED1E8168FC005CEEEC /* ClassifyVC.m */,
+				356F8C0B1E987E7A00D2459B /* ClassifyDataModel.h */,
+				356F8C0C1E987E7A00D2459B /* ClassifyDataModel.m */,
+				356F8C081E987E1A00D2459B /* LeftTableViewCell.h */,
+				356F8C091E987E1A00D2459B /* LeftTableViewCell.m */,
+				356F8C0E1E988A7700D2459B /* RightTableTopCell.h */,
+				356F8C0F1E988A7700D2459B /* RightTableTopCell.m */,
 			);
 			name = Classify;
 			sourceTree = "<group>";
@@ -748,7 +763,9 @@
 				35EE6A201E820B61005CEEEC /* UIImageView+WebCache.m in Sources */,
 				356F8C011E97504300D2459B /* MarketCell.m in Sources */,
 				35EE69E71E816260005CEEEC /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
+				356F8C0D1E987E7A00D2459B /* ClassifyDataModel.m in Sources */,
 				35EE6A181E820B61005CEEEC /* SDWebImageDownloaderOperation.m in Sources */,
+				356F8C101E988A7700D2459B /* RightTableTopCell.m in Sources */,
 				350DA6151E88F51A00398DB5 /* UserInfoVC.m in Sources */,
 				350DA60B1E851E4400398DB5 /* BaseNaviViewController.m in Sources */,
 				35EE6A191E820B61005CEEEC /* SDWebImageManager.m in Sources */,
@@ -799,6 +816,7 @@
 				35EE6A3D1E821B5C005CEEEC /* TADotView.m in Sources */,
 				35EE6A131E820B61005CEEEC /* NSData+ImageContentType.m in Sources */,
 				35EE6A1E1E820B61005CEEEC /* UIImage+WebP.m in Sources */,
+				356F8C0A1E987E1A00D2459B /* LeftTableViewCell.m in Sources */,
 				35EE6A4A1E837C68005CEEEC /* StartUpAdsVC.m in Sources */,
 				356F8C041E97744B00D2459B /* RecommandGoodsCell.m in Sources */,
 			);

@@ -7,7 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SearchBarView.h"
+#import "SepLineView.h"
+#import "ClassifyDataModel.h"
 
-@interface ClassifyVC : UIViewController
+@interface ClassifyVC : UIViewController <UITableViewDelegate,UITableViewDataSource>
 
+{
+    UIView *navBar;
+    UIButton *locationSelect;
+    UIButton *newsBtn;
+    SearchBarView *searchBar;
+    SepLineView *lineView;
+    
+    UITableView *leftTable;
+    UITableView *rightTable;
+    
+    ClassifyDataModel *model;
+    
+    int selectIndex; // 确定左侧选择类目的索引号
+}
 @end

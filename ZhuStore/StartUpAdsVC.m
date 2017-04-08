@@ -17,6 +17,15 @@
 @end
 
 @implementation StartUpAdsVC
+-(void)viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:YES];
+    
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
